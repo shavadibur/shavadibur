@@ -1,0 +1,53 @@
+.about-program-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 5px;
+}
+
+.title {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-color: #ffc801;
+}
+
+.coures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.coures-info p {
+    color: #1C2E33;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.img {
+    width: 350px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .coures {
+        width: 90%;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+}   

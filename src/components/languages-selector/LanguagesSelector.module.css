@@ -1,0 +1,16 @@
+.lang {
+    position: relative;
+    width: 70px;
+    z-index: 10;
+}
+
+.lang-selections{
+    position: absolute;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1rem;
+}
+
+.lang-options {
+    cursor: pointer;
+}

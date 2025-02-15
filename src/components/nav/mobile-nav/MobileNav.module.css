@@ -1,0 +1,40 @@
+.mobile-nav-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 100;
+    background-color: #000000de;
+}
+
+.mobile-menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mobile-menu-button img {
+    width: 25px;
+    height: 25px;
+
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height: 100dvh;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: rgb(117 114 114);
+    color: #F5B400;
+    &:global(.active) {
+        font-weight: 900;
+    }
+}

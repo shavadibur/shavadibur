@@ -1,0 +1,18 @@
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(117 114 114);
+
+    &:global(.active) {
+        font-weight: 900;
+    }
+
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}

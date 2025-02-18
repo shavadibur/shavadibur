@@ -3,11 +3,44 @@ import { Translation } from "../../types/translation";
 export const arabic: Translation = {
     header: {
         navItems: {
-            homePage: 'Home',
-            aboutProgram: 'Curriculum',
-            aboutUs: "About Us",
-            contactUs: "Contact Us"
+            homePage: 'البيت',
+            aboutProgram: 'برامج التعلم',
+            aboutUs: "معلومات عنا",
+            contactUs: "اتصل بنا"
+        }
+    },
+    main: {
+        pages: {
+            home: {
+                title: "يستحق الحديث عنه",
+                mainParagraph: "شوي ديبور هو برنامج لتعلم اللغة العبرية المنطوقة. يركز البرنامج على تطوير مهارات التحدث وكسر حاجز اللغة. ويرتكز هذا على الفهم بأن القدرة على التواصل باللغة العبرية هي مفتاح التكامل والتقدم الشخصي والمهني.",
+                ourGoals: {
+                    title: "ما هي أهدافنا؟",
+                    cards: [
+                        { content: "تعلم اللغة العبرية بطريقة بسيطة وتجريبية" },
+                        { content: "توفير مساحة آمنة للتعلم والتحدث والتعبير عن الذات" },
+                        { content: "تعلم كيفية استخدام اللغة العبرية كأداة للنجاح وفتح أبواب جديدة" },
+                        { content: "تحسين الثقة بالنفس والشعور بالكفاءة" },
+                    ]
+                },
+                whyUs: {
+                    title: "لماذا يجب عليك الدراسة معنا؟",
+                    cards: [
+                        { content: "سوف نتعلم التحدث باللغة العبرية من اللقاء الأول!" },
+                        { content: "التعلم في مجموعات صغيرة" },
+                        { content: "يمكنك التعلم من أي مكان - التعلم يتم عبر Zoom!" },
+                    ]
+                }
+            },
+            aboutProgram: {
+                title: ""
+            },
+            aboutUs: {
+                title: ""
+            },
+            contactUs: {
+                title: ""
+            }
         }
     }
-    
 }

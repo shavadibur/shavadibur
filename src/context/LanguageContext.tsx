@@ -9,6 +9,7 @@ type LanguageContextProps = {
     language: Language
     translation: Translation
     selectLanguage: (languagesOptions: LanguagesOptions) => void
+    getPageTranslation: <T,>(page: 'home' | 'aboutProgram' | 'aboutUs' | 'contactUs') => T
 }
 
 const Languages = {
@@ -26,15 +27,15 @@ export enum LanguagesOptions {
     HEB, ARB
 }
 
-export const LanguageContext = createContext< undefined | null | LanguageContextProps>(undefined)
+export const LanguageContext = createContext<LanguageContextProps>({} as LanguageContextProps)
 
-export default function LanguageContextProvider ({children} : {children:React.ReactElement}) {
+export default function LanguageContextProvider({ children }: { children: React.ReactElement }) {
 
-    const [language,setLanguage] = useState<Language>(Languages.heb)
-    const [translation,setTranslation] = useState<Translation>(hebrew)
+    const [language, setLanguage] = useState<Language>(Languages.heb)
+    const [translation, setTranslation] = useState<Translation>(hebrew)
 
-    const selectLanguage = (languagesOptions:LanguagesOptions) => {
-        switch(languagesOptions){
+    const selectLanguage = (languagesOptions: LanguagesOptions) => {
+        switch (languagesOptions) {
             case LanguagesOptions.HEB:
                 setLanguage(Languages.heb)
                 setTranslation(hebrew)
@@ -46,8 +47,12 @@ export default function LanguageContextProvider ({children} : {children:React.Re
         }
     }
 
+    const getPageTranslation = <T,>(page: 'home' | 'aboutProgram' | 'aboutUs' | 'contactUs') => {
+        return translation.main.pages[page] as T
+    }
+
     return (
-        <LanguageContext.Provider value={{language,translation,selectLanguage}}>
+        <LanguageContext.Provider value={{ language, translation, selectLanguage , getPageTranslation }}>
             {children}
         </LanguageContext.Provider>
     )

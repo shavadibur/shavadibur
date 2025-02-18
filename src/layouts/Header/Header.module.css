@@ -1,8 +1,12 @@
-.logo {
-    /* margin-right: 25px; */
-}
-
 .languages {
-    /* margin-left: 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
 }
 
+.nav {}
+
+.logo {
+    width: 55px;
+}

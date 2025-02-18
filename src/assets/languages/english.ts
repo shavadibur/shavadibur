@@ -1,4 +1,3 @@
-import { Translation } from "../../types/translation";
 export const english = {
     header: {
         navItems: {

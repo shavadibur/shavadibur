@@ -49,21 +49,21 @@ export default function EmailForm(emailFormProps:EmailFormProps) {
     return (
         <form className={style['form']} ref={formRef} onSubmit={(e) => { sendEmail(e) }}>
             <div className={style['form-div']}>
-                <label>{emailFormProps.username}</label>
-                <input type="text" name="user_name" />
+                <label htmlFor='user_name'>{emailFormProps.username}</label>
+                <input type="text" name="user_name" id='user_name'/>
             </div>
             <div className={style['form-div']}>
-                <label>{emailFormProps.phone}</label>
-                <input type="tel" name="user_phone" onChange={(e)=>{
+                <label htmlFor='user_phone'>{emailFormProps.phone}</label>
+                <input type="tel" name="user_phone" id='user_phone' onChange={(e)=>{
                     e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10)
                 }} />
             </div>
             <div className={style['form-div']}>
-                <label>{emailFormProps.message}</label>
-                <textarea name="message" />
+                <label htmlFor='message'>{emailFormProps.message}</label>
+                <textarea name="message" id='message'/>
             </div>
             <div className={`${style['form-submit']}`}>
-                <input type="submit" value={emailFormProps.submitBtn} />
+                <input type="submit" id='submit' name='submit' value={emailFormProps.submitBtn} />
             </div>
             <p className={style['error-message']}>{errorMessage}</p>
         </form>

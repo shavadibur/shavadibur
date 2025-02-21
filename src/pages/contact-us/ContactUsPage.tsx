@@ -24,7 +24,7 @@ export default function ContactUsPage() {
             </h1>
             <div className={style['contact-us-info-container']}>
                 <div className={style['contact-us-image']}>
-                    <img src={contactUsImage} />
+                    <img src={contactUsImage} alt="contactUsImage"/>
                 </div>
                 <div className={style['contact-us-info']}>
                     <div className={style['contact-us-info-links']}>
@@ -45,7 +45,6 @@ export default function ContactUsPage() {
                             imgSrc={whatsAppIcon}
                             imgAlt={"emailIcon"}
                             contactInfo={contactUsPageTranslation.whatapp}
-                            // contactInfo={"צאט בוואטסאפ"}
                         />
                     </div>
                     <div className={style['email-form']}>

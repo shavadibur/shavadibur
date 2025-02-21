@@ -3,8 +3,16 @@ import emailjs from '@emailjs/browser';
 import style from './EmailForm.module.css'
 
 
+export type EmailFormProps = {
+    username: string,
+    phone: string,
+    message: string,
+    submitBtn: string   
+}
 
-export default function EmailForm() {
+export default function EmailForm(emailFormProps:EmailFormProps) {
+
+
 
     const formRef = useRef<HTMLFormElement>(null);
     const [errorMessage, setErrorMessage] = useState<string>('')
@@ -41,21 +49,21 @@ export default function EmailForm() {
     return (
         <form className={style['form']} ref={formRef} onSubmit={(e) => { sendEmail(e) }}>
             <div className={style['form-div']}>
-                <label>שם מלא:</label>
+                <label>{emailFormProps.username}</label>
                 <input type="text" name="user_name" />
             </div>
             <div className={style['form-div']}>
-                <label>טלפון:</label>
+                <label>{emailFormProps.phone}</label>
                 <input type="tel" name="user_phone" onChange={(e)=>{
                     e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10)
                 }} />
             </div>
             <div className={style['form-div']}>
-                <label>הודעה:</label>
+                <label>{emailFormProps.message}</label>
                 <textarea name="message" />
             </div>
             <div className={`${style['form-submit']}`}>
-                <input type="submit" value="שלח" />
+                <input type="submit" value={emailFormProps.submitBtn} />
             </div>
             <p className={style['error-message']}>{errorMessage}</p>
         </form>

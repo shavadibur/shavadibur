@@ -1,9 +1,17 @@
 
 
+import { useContext } from 'react'
 import { YouTubeVideoList } from '../../components/you-tube/video-list/YouTubeVideoList'
 import { YouTubeVideo } from '../../components/you-tube/video/YouTubeVideo'
 import style from './AboutUsPage.module.css'
+import { LanguageContext } from '../../context/LanguageContext'
+import { AboutUsPageTranslation } from '../../types/translation'
 export default function AboutUsPage() {
+
+    const languageContext = useContext(LanguageContext)
+    const aboutUsPageTranslation: AboutUsPageTranslation = languageContext?.getPageTranslation<AboutUsPageTranslation>('aboutUs')
+    
+
     return (
         <div className={style['about-us-page']}>
             <div className={style['profile-container']}>
@@ -12,24 +20,24 @@ export default function AboutUsPage() {
                 </div>
                 <div className={style['about-us-info']}>
                     <p className={style['paragraph']}>
-                        המייסדת והמנהלת הפדגוגית של התוכנית
+                        {aboutUsPageTranslation.title}
                     </p>
                     <ul className={style['list']}>
                         <li className={style['list-item']}>
                             <span>🎓</span>
-                            <span>בעלת תואר ראשון בחינוך סוצילוגיה- אנתרופולוגיה ותואר שני במדיניות ציבורית מהאוניברסיטה העברית.</span>
+                            {aboutUsPageTranslation.p.part1}
                         </li>
                         <li className={style['list-item']}>
                             <span>📚</span>
-                            <span>בעלת תעודת הוראה "בעברית כשפה שנייה" מטעם האוניברסיטה העברית ותעודת הוראה "בעברית כשפה נוספת" מטעם הקריה האקדמית אונו.</span>
+                            {aboutUsPageTranslation.p.part2}
                         </li>
                         <li className={style['list-item']}>
                             <span>🙋🏽‍♀️</span>
-                            <span>אחראית תחום למידת השפה העברית במזרח ירושלים בארגון "חותם".</span>
+                            {aboutUsPageTranslation.p.part3}
                         </li>
                         <li className={style['list-item']}>
                             <span>👩🏽‍🏫</span>
-                            <span>בעלת ניסיון של למעלה מעשור בהוראת ולמידת השפה העברית במגזר הערבי.</span>
+                            {aboutUsPageTranslation.p.part4}
                         </li>
                     </ul>
                 </div>

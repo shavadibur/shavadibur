@@ -1,4 +1,5 @@
 .about-program-page {
+    color: #1C2E33;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,10 +25,11 @@
     gap: 30px;
 }
 
-.coures-info p {
+.coures-info-p1,
+.coures-info-p2,
+.coures-info-p3,
+.coures-info-p4 {
     color: #1C2E33;
-    font-weight: bolder;
-    font-size: 1.5rem;
     text-align: center;
     margin: 0.5rem;
 }
@@ -36,6 +38,29 @@
     width: 350px;
 }
 
+.coures-info-p1 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.coures-info-p2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.coures-info-p3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.coures-info-p4 {
+    font-size: 1.5rem;
+}
+
+
+.practice-time {
+    font-size: 2rem;
+}
 
 @media screen and (max-width: 600px) {
     .title {
@@ -50,4 +75,4 @@
         width: 100%;
     }
 
-}   
+}

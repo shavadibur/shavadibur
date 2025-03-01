@@ -64,6 +64,7 @@ export type AboutUsPageTranslation = {
         part3: string
         part4: string
     }
+    socialMediaTitle: string
 }
 
 export type ContactUsPageTranslation = {

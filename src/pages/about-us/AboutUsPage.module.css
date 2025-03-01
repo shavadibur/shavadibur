@@ -67,9 +67,46 @@
 }
 
 
-.video-list-container {
+/* .video-list-container {
     padding: 2rem;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+} */
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    @keyframes social-media-links-animation {
+        0% {
+            transform: translateY(0);
+        }
+    
+        50% {
+            transform: translateY(10px);
+        }
+    
+        100% {
+            transform: translateY(0);
+        }
+        
+    }
+
+    .social-media-links a:hover {
+        animation: social-media-links-animation 0.8s ease-in-out infinite;
+    }
 }
 
 @media screen and (max-width: 600px) {

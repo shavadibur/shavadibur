@@ -28,9 +28,6 @@ export default function HomePage() {
             <section className={style['section']}>
                 <p className={style['main-pragraph']}>
                     {homePageTranslation.mainParagraph}
-                    {/* <span className={style['bold-text']}> "שווה דיבור" </span> היא תוכנית ללמידת עברית מדוברת.
-                    התוכנית מתמקדת בפיתוח מיומנות הדיבור ובשבירת מחסום השפה.
-                    זאת מתוך הבנה שהיכולת <span className={style['bold-text']}>לדבר, להתבטא ולתקשר</span> בעברית היא המפתח להשתלבות ולהתקדמות אישית ומקצועית. */}
                 </p>
             </section>
 

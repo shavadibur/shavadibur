@@ -13,6 +13,33 @@
 
 }
 
-.nav a:hover {
-    text-decoration: underline;
+
+
+
+@media screen and (min-width: 768px) {
+
+    @keyframes width {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    .nav a:before {
+        content: '';
+        display: block;
+        height: 2px;
+    }
+
+    .nav a:hover::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: black;
+        animation: width both 0.3s;
+    }
+    
 }

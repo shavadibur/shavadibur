@@ -1,6 +1,7 @@
 import LanguagesSelector from "../../components/languages-selector/LanguagesSelector";
 import Nav from "../../components/nav/Nav";
 import style from './Header.module.css'
+import logoIcon from '../../assets/icons/logo.png'
 
 export default function Header() {
     return (
@@ -12,7 +13,7 @@ export default function Header() {
                 <Nav />
             </div>
             <div className={style['logo']}>
-                {/* <img width={40} src={worthTalkIcon} alt="worthTalkIcon" /> */}
+                <img src={logoIcon} alt="worthTalkIcon" />
             </div>
         </>
     )

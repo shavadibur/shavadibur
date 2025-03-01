@@ -1,7 +1,6 @@
 
 
 import { useContext } from 'react'
-import { YouTubeVideoList } from '../../components/you-tube/video-list/YouTubeVideoList'
 import { YouTubeVideo } from '../../components/you-tube/video/YouTubeVideo'
 import style from './AboutUsPage.module.css'
 import { LanguageContext } from '../../context/LanguageContext'

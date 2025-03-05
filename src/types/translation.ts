@@ -45,6 +45,8 @@ export type AboutProgramPageTranslation = {
             part3: string
         }
         p4: string
+        cost: string
+        price: string
     }
     courses: {
         name: string

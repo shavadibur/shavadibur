@@ -35,10 +35,10 @@ export default function ContactUsPage() {
                             contactInfo={`0585231993`}
                         />
                         <ContactLink
-                            linkHref={"mailto:shavadibur@gmail.com"}
+                            linkHref={"mailto:litalivrit@gmail.com"}
                             imgSrc={emailIcon}
                             imgAlt={"emailIcon"}
-                            contactInfo={"shavadibur@gmail.com"}
+                            contactInfo={"litalivrit@gmail.com"}
                         />
                         <ContactLink
                             linkHref={"https://wa.me/972585231993"}
